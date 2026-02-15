@@ -139,43 +139,71 @@ npm run report
 
 ## 📊 Test Coverage
 
-### 1. Authentication Tests (`tests/auth/login.spec.ts`)
-- ✅ Login with valid credentials
-- ✅ Login with invalid credentials
-- ✅ Login with locked user
+**Total: 54 automated tests** with 100% pass rate
+
+### 1. Authentication Tests (`tests/auth/login.spec.ts`) - 10 tests
+- ✅ Login with valid standard user credentials
+- ✅ Login with performance glitch user
+- ✅ Invalid credentials error handling
+- ✅ Locked out user error message
 - ✅ Empty username validation
 - ✅ Empty password validation
-- ✅ Error message handling
+- ✅ Empty both fields validation
+- ✅ Close error message functionality
+- ✅ Login page elements display
+- ✅ Clear login form fields
 
-### 2. Product Browsing Tests (`tests/inventory/products.spec.ts`)
-- ✅ Display all products
-- ✅ Sort products by name (A-Z, Z-A)
-- ✅ Sort products by price (low-high, high-low)
-- ✅ Navigate to product details
-- ✅ Add/remove products from inventory
-
-### 3. Shopping Cart Tests (`tests/cart/cart.spec.ts`)
+### 2. Product Browsing Tests (`tests/inventory/products.spec.ts`) - 12 tests
+- ✅ Display all 6 products on inventory page
+- ✅ Sort products by name (A-Z)
+- ✅ Sort products by name (Z-A)
+- ✅ Sort products by price (low to high)
+- ✅ Sort products by price (high to low)
+- ✅ Navigate to product detail page and back
+- ✅ Add product to cart from inventory
 - ✅ Add multiple products to cart
-- ✅ Remove products from cart
-- ✅ Continue shopping functionality
-- ✅ Empty cart state
-- ✅ Cart persistence across pages
+- ✅ Remove product from cart on inventory page
+- ✅ Navigate to cart page from inventory
+- ✅ Verify page title is correct
+- ✅ Verify specific product is displayed
 
-### 4. Checkout Process Tests (`tests/checkout/checkout.spec.ts`)
+### 3. Shopping Cart Tests (`tests/cart/cart.spec.ts`) - 11 tests
+- ✅ Add multiple products to cart
+- ✅ Remove product from cart
+- ✅ Continue shopping from cart page
+- ✅ Display empty cart when all items removed
+- ✅ Maintain cart items across pages
+- ✅ Verify cart item prices are displayed correctly
+- ✅ Verify checkout button is visible and enabled
+- ✅ Verify continue shopping button is visible
+- ✅ Verify cart page title
+- ✅ Check if specific product is in cart
+- ✅ Remove all items from cart
+
+### 4. Checkout Process Tests (`tests/checkout/checkout.spec.ts`) - 11 tests
 - ✅ Complete checkout with valid information
 - ✅ Validation for missing first name
 - ✅ Validation for missing last name
 - ✅ Validation for missing postal code
-- ✅ Cancel checkout functionality
-- ✅ Order total calculation verification
+- ✅ Cancel checkout and return to cart
+- ✅ Display correct item information in checkout overview
+- ✅ Cancel from checkout overview and return to inventory
+- ✅ Return to home after order completion
+- ✅ Verify checkout step one page title
+- ✅ Verify checkout step two page title
+- ✅ Complete checkout with multiple items
 
-### 5. End-to-End Tests (`tests/e2e/end-to-end.spec.ts`)
+### 5. End-to-End Tests (`tests/e2e/end-to-end.spec.ts`) - 10 tests
 - ✅ Logout functionality
-- ✅ Complete user journey (login → browse → cart → checkout → logout)
-- ✅ Reset app state
-- ✅ Browser navigation (back/forward)
-- ✅ Unauthorized access prevention
-- ✅ Session persistence
+- ✅ Complete full user journey (login → browse → add to cart → checkout → confirmation → logout)
+- ✅ Reset app state and clear cart
+- ✅ Navigate using browser back button
+- ✅ Prevent unauthorized access to protected pages
+- ✅ Maintain session across page reloads
+- ✅ Handle multiple product additions and removals
+- ✅ Navigate through all pages in correct order
+- ✅ Verify menu functionality
+- ✅ Handle empty cart checkout attempt gracefully
 
 ## 🔧 Configuration
 
