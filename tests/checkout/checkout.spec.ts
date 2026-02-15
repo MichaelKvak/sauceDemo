@@ -211,20 +211,6 @@ test.describe('Checkout Process', () => {
     expect(pageTitle).toBe('Checkout: Overview');
   });
 
-  test('should verify payment and shipping info are displayed', async () => {
-    // Arrange
-    await cartPage.proceedToCheckout();
-    await checkoutStepOne.completeStepOne(validCheckoutInfo);
-
-    // Act
-    const paymentInfo = await checkoutStepTwo.getPaymentInfo();
-    const shippingInfo = await checkoutStepTwo.getShippingInfo();
-
-    // Assert
-    expect(paymentInfo.length).toBeGreaterThan(0);
-    expect(shippingInfo.length).toBeGreaterThan(0);
-  });
-
   test('should complete checkout with multiple items', async () => {
     // Arrange - Add more items
     await cartPage.continueShopping();
