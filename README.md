@@ -6,14 +6,14 @@ A comprehensive test automation framework built with Playwright and TypeScript f
 
 - **Page Object Model (POM)**: Clean separation of page elements and test logic
 - **TypeScript**: Type-safe code with full IntelliSense support
-- **Comprehensive Test Coverage**: 5 test suites covering authentication, product browsing, cart operations, checkout process, and end-to-end scenarios
-- **Reusable Base Page**: Abstract `BasePage` class with common methods for all page objects
+- **Comprehensive Test Coverage**: 54 automated tests across 5 test suites covering authentication, product browsing, cart operations, checkout process, and end-to-end scenarios
+- **Reusable Base Page**: Abstract `BasePage` class with 40+ common methods for all page objects
 - **Centralized Test Data**: Static test data stored in separate files
 - **Environment Variables**: Secure credential storage using `.env` files
-- **CI/CD Integration**: GitHub Actions workflow for automated test execution
-- **Cross-Browser Support**: Tests configured for Chromium, Firefox, and WebKit
+- **CI/CD Integration**: GitHub Actions workflow for automated test execution on every push
+- **Cross-Browser Support**: Tests configured for Chromium (active), Firefox, and WebKit
 - **Parallel Execution**: Tests run concurrently for faster feedback
-- **Rich Reporting**: HTML, JSON, and JUnit test reports
+- **Rich Reporting**: HTML, JSON, and JUnit test reports with screenshots and videos on failure
 
 ## 📋 Prerequisites
 
